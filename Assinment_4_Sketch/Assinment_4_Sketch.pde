@@ -2,17 +2,17 @@ character c = new character();
 
 
 void setup() {
- size(1280, 720);
+ size(400, 400);
  c = new character();
 }
 
 
 void draw() {
-background(200);
+ background(200);
 
-stroke(0);
-fill(0);
-rect(0, 720-50, 1280, 50);
-c.Cdisplay();
-c.Jump();
+ stroke(0);
+ fill(0);
+ rect(0, 350, 400, 50);
+ c.Cdisplay();
+// c.Jump();
 }
