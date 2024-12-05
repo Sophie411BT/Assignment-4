@@ -18,8 +18,8 @@ class character {
    rect(position.x, position.y, size, size);
   //an if statment telling the jump code to exacute when the player presses the space bar (for some reson the code breaks if i try to impliment using a different key)
   if (keyPressed && (key == ' ')){
-     velocity.y = -30;
-     acceleration.y = 9.8;
+     velocity.y = -20;
+     acceleration.y = 1;
    }
    if (position.y >= 350) {
      acceleration.y = 0;
