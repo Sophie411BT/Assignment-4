@@ -6,6 +6,7 @@ class character {
   PVector position = new PVector(400/2 - size/2, 500);
   PVector velocity = new PVector(0, 0);
   PVector acceleration = new PVector(0, 0);
+  //set radius of the enemy
   float r1 = 25;
   
   
@@ -14,7 +15,7 @@ class character {
    //i add position and velocity, velocity and acceleration to create physics of the jump
    position.add(velocity);
    velocity.add(acceleration);
-   //draw the player (in this case they are a sqare)
+   //draw the player (in this case they are a circle)
    stroke(0);
    fill(255);
    ellipse(position.x, position.y, size, size);
@@ -23,6 +24,7 @@ class character {
      velocity.y = -20;
      acceleration.y = 1;
    }
+   //two if statments to keep the character from falling off the bottum of the screen. when the character position is touching the floor set velocity and acceleration to 0, and set position to 500 (on the y axis)
    if (position.y >= 550) {
      acceleration.y = 0;
      velocity.y = 0;
@@ -33,8 +35,6 @@ class character {
      velocity.y = 0;
      position.y = 500; 
    }
-   //return true if player intersects enemies
-
   }
 }   
    
